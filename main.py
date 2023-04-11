@@ -7,6 +7,8 @@ import keyboard
 from PIL import Image
 import shutil
 
+from os import path
+
 
 class App(tk.CTk):
     def __init__(self, *args, **kwargs):
@@ -28,10 +30,11 @@ class App(tk.CTk):
         self.grid_rowconfigure((0, 1, 2, 5, 6, 7), weight=1)
         self.grid_columnconfigure(0, weight=1)
 
-        self.rec_image = tk.CTkImage(light_image=Image.open("rec-button.png"),
-                                     dark_image=Image.open("rec-button.png"),
+        self.rec_image = tk.CTkImage(light_image=Image.open("rec-button.png" if path.curdir == "." else "../../rec-button.png"),
+                                     dark_image=Image.open("rec-button.png" if path.curdir == "." else "../../rec-button.png"),
                                      size=(50, 50))
         self.rec_image_label = tk.CTkLabel(self, image=self.rec_image, text="")
+        
         self.rec_image_label.grid(row=0, column=0, pady=(0, 20))
 
         self.choose_folder_label = tk.CTkLabel(
@@ -102,7 +105,8 @@ class App(tk.CTk):
         
 
 if __name__ == "__main__":
-    app = App()
-    app.iconbitmap("icon.ico")
-    tk.set_appearance_mode("dark")
-    app.mainloop()
+    print(path.curdir == ".")
+    # app = App()
+    # app.iconbitmap("icon.ico")
+    # tk.set_appearance_mode("dark")
+    # app.mainloop()

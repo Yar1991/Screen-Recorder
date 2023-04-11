@@ -25,5 +25,5 @@ pip show customtkinter # get location to the customtkinter directory
 ```
 
 ```bash
-pyinstaller --noconfirm --onedir --windowed --icon="icon.ico" --add-data "customTkinter location path"/customtkinter;customtkinter/ main.py
+pyinstaller --noconfirm --onedir --windowed --icon="icon.ico" --add-data "<customTkinter location path>/customtkinter;customtkinter/" main.py
 ```
