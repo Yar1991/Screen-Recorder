@@ -21,7 +21,7 @@ pip install -r requirements.txt # installing dependencies
 ### In case you want to create an .exe, there are a couple of steps to make:
 
 ```bash
-pip show customtkinter # get path to the customtkinter directory
+pip show customtkinter # get location to the customtkinter directory
 ```
 
 ```bash
