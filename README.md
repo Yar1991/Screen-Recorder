@@ -18,7 +18,7 @@ source "name of your environment folder"/Scripts/activate # activate the environ
 pip install -r requirements.txt # installing dependencies
 ```
 
-### In case you want to create an .exe, there are a couple of steps to make:
+### Creating an .exe:
 
 ```bash
 pip show customtkinter # get location to the customtkinter directory
